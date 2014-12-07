@@ -31,7 +31,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
                sym.$("raam").hide();
                
                
-               sym.$("play").click(function()
+               /*sym.$("play").click(function()
                			{
                			PlayClickSound();
                			var usernamevalue = usernameinvoer.attr('value');
@@ -62,7 +62,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
                			setTimeout(function() { StartCadeau3() },Rand3);   
                			}
                			}
-               			);
+               			);*/
 
       });
       //Edge binding end
@@ -87,8 +87,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2790, function(sym, e) {
-         sym.$("Play").click(function(){
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2835, function(sym, e) {
+         sym.$("Symbol_1").click(function(){
          console.log("playknop geklikt");
          
          				// Hide an Element.
@@ -102,8 +102,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          				sym.$("grinch").hide();
          				sym.$("landschap_intro").hide();
          				sym.$("tekstballon").hide();
-         			
-         			
+         
+         
          			var Rand1 = Math.floor(Math.random() * 3000) + 1000;
          			var Rand2 = Math.floor(Math.random() * 3000) + 1000;
          			var Rand3 = Math.floor(Math.random() * 3000) + 1000;
@@ -112,7 +112,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          			setTimeout(function() { StartCadeau2() },Rand2);
          			setTimeout(function() { StartCadeau3() },Rand3);   
          			}
-         			
+         
          );
 
       });
@@ -327,5 +327,42 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
    })("SymPlaats2");
    //Edge symbol end:'SymPlaats2'
+
+   //=========================================================
+   
+   //Edge symbol: 'Symbol_1'
+   (function(symbolName) {   
+   
+      Symbol.bindElementAction(compId, symbolName, "${Play}", "click", function(sym, e) {
+         console.log("playknop geklikt");
+         				// Hide an Element.
+         				//  (sym.$("name") resolves an Edge Animate element name to a DOM
+         				//  element that can be used with jQuery)
+         				sym.$("Play").hide();
+         				sym.$("Highscores").hide();
+         				sym.$("lijn1").hide();
+         				sym.$("lijn2").hide();
+         				sym.$("lijn3").hide();
+         				sym.$("grinch").hide();
+         				sym.$("landschap_intro").hide();
+         				sym.$("tekstballon").hide();
+         
+         
+         			var Rand1 = Math.floor(Math.random() * 3000) + 1000;
+         			var Rand2 = Math.floor(Math.random() * 3000) + 1000;
+         			var Rand3 = Math.floor(Math.random() * 3000) + 1000;
+         			console.log(Rand1);
+         			console.log(Rand2);
+         
+         		/*	setTimeout(function() { StartCadeau1() },Rand1); 
+         			setTimeout(function() { StartCadeau2() },Rand2);
+         			setTimeout(function() { StartCadeau3() },Rand3);  */ 
+         
+
+      });
+      //Edge binding end
+
+   })("Play");
+   //Edge symbol end:'Play'
 
 })(window.jQuery || AdobeEdge.$, AdobeEdge, "EDGE-333270303");

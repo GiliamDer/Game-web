@@ -20,9 +20,9 @@
         ],
         symbols = {
             "stage": {
-                version: "5.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "5.0.0.375",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
@@ -96,7 +96,7 @@
                             rect: ['286px', '253px', '360px', '154px', 'auto', 'auto'],
                             overflow: 'visible',
                             borderRadius: ["10px", "10px", "10px", "10px"],
-                            opacity: 0,
+                            opacity: '0',
                             fill: ["rgba(255,255,255,0.75)"],
                             stroke: [0,"rgba(0,0,0,1)","none"]
                         },
@@ -128,21 +128,18 @@
                             font: ['Arial, Helvetica, sans-serif', [37, "px"], "rgba(0,0,0,1)", "600", "none solid rgb(0, 0, 0)", "normal", "break-word", "nowrap"]
                         },
                         {
-                            id: 'Play',
-                            display: 'none',
-                            type: 'text',
-                            rect: ['631px', '34px', 'auto', 'auto', 'auto', 'auto'],
-                            opacity: 0,
-                            text: "Play",
-                            align: "left",
-                            font: ['alice, serif', [40, "px"], "rgba(245,225,31,1.00)", "600", "none solid rgb(0, 0, 0)", "normal", "break-word", "nowrap"]
+                            id: 'Symbol_1',
+                            symbolName: 'Play',
+                            type: 'rect',
+                            rect: ['631', '34', '81', '44', 'auto', 'auto'],
+                            cursor: 'pointer'
                         },
                         {
                             id: 'Highscores',
                             display: 'none',
                             type: 'text',
                             rect: ['47px', '34px', 'auto', 'auto', 'auto', 'auto'],
-                            opacity: 0,
+                            opacity: '0',
                             text: "Highscores",
                             align: "left",
                             font: ['alice, serif', [40, "px"], "rgba(239,218,16,1.00)", "600", "none solid rgb(243, 230, 105)", "normal", "break-word", "nowrap"]
@@ -160,7 +157,51 @@
                 timeline: {
                     duration: 10340,
                     autoPlay: true,
+                    labels: {
+                        "Startgame": 2835
+                    },
                     data: [
+                        [
+                            "eid163",
+                            "opacity",
+                            0,
+                            0,
+                            "linear",
+                            "${tekstballon}",
+                            '0',
+                            '0'
+                        ],
+                        [
+                            "eid164",
+                            "opacity",
+                            615,
+                            260,
+                            "linear",
+                            "${tekstballon}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid162",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${tekstballon}",
+                            'block',
+                            'block'
+                        ],
+                        [
+                            "eid168",
+                            "clip",
+                            985,
+                            445,
+                            "linear",
+                            "${lijn1}",
+                            [0,0,44,0],
+                            [0,306,44,0],
+                            {valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'}
+                        ],
                         [
                             "eid161",
                             "top",
@@ -182,16 +223,6 @@
                             '254px'
                         ],
                         [
-                            "eid162",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${tekstballon}",
-                            'block',
-                            'block'
-                        ],
-                        [
                             "eid185",
                             "opacity",
                             2450,
@@ -202,14 +233,14 @@
                             '1'
                         ],
                         [
-                            "eid187",
-                            "opacity",
-                            2450,
-                            340,
+                            "eid191",
+                            "height",
+                            1500,
+                            1290,
                             "linear",
-                            "${Play}",
-                            '0',
-                            '1'
+                            "${tekstballon}",
+                            '154px',
+                            '153px'
                         ],
                         [
                             "eid173",
@@ -243,28 +274,6 @@
                             'block'
                         ],
                         [
-                            "eid172",
-                            "clip",
-                            1575,
-                            470,
-                            "linear",
-                            "${lijn2}",
-                            [0,0,45,0],
-                            [0,335,45,0],
-                            {valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'}
-                        ],
-                        [
-                            "eid168",
-                            "clip",
-                            985,
-                            445,
-                            "linear",
-                            "${lijn1}",
-                            [0,0,44,0],
-                            [0,306,44,0],
-                            {valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'}
-                        ],
-                        [
                             "eid167",
                             "width",
                             1500,
@@ -275,77 +284,38 @@
                             '360px'
                         ],
                         [
-                            "eid191",
-                            "height",
-                            1500,
-                            1290,
+                            "eid172",
+                            "clip",
+                            1575,
+                            470,
                             "linear",
-                            "${tekstballon}",
-                            '154px',
-                            '153px'
-                        ],
-                        [
-                            "eid179",
-                            "display",
-                            0,
-                            0,
-                            "linear",
-                            "${Play}",
-                            'none',
-                            'none'
-                        ],
-                        [
-                            "eid182",
-                            "display",
-                            2450,
-                            0,
-                            "linear",
-                            "${Play}",
-                            'none',
-                            'block'
-                        ],
-                        [
-                            "eid163",
-                            "opacity",
-                            0,
-                            0,
-                            "linear",
-                            "${tekstballon}",
-                            '0',
-                            '0'
-                        ],
-                        [
-                            "eid164",
-                            "opacity",
-                            615,
-                            260,
-                            "linear",
-                            "${tekstballon}",
-                            '0',
-                            '1'
+                            "${lijn2}",
+                            [0,0,45,0],
+                            [0,335,45,0],
+                            {valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'}
                         ]
                     ]
                 }
             },
             "SymPlaats1": {
-                version: "5.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "5.0.0.375",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
                     dom: [
                         {
-                            rect: ['69px', '0px', '49px', '54px', 'auto', 'auto'],
-                            id: 'cadeau_rood1',
                             type: 'image',
+                            id: 'cadeau_rood1',
+                            rect: ['69px', '0px', '49px', '54px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/cadeau_rood.png', '0px', '0px']
                         },
                         {
-                            rect: ['0px', '0px', '49px', '54px', 'auto', 'auto'],
-                            id: 'cadeau_zwart1',
                             type: 'image',
+                            id: 'cadeau_zwart1',
+                            rect: ['0px', '0px', '49px', '54px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/cadeau_zwart.png', '0px', '0px']
                         }
                     ],
@@ -489,24 +459,24 @@
                 }
             },
             "symPlaats3": {
-                version: "5.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "5.0.0.375",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
                     dom: [
                         {
-                            rect: ['0px', '0px', '65px', '72px', 'auto', 'auto'],
-                            id: 'cadeau_rood3Copy',
                             type: 'image',
+                            id: 'cadeau_rood3Copy',
+                            rect: ['0px', '0px', '65px', '72px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/cadeau_rood.png', '0px', '0px']
                         },
                         {
-                            rect: ['0px', '0px', '65px', '72px', 'auto', 'auto'],
-                            id: 'cadeau_zwart3Copy',
                             type: 'image',
+                            id: 'cadeau_zwart3Copy',
+                            rect: ['0px', '0px', '65px', '72px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/cadeau_zwart.png', '0px', '0px']
                         }
                     ],
@@ -547,24 +517,24 @@
                             '1'
                         ],
                         [
-                            "eid129",
-                            "scaleY",
-                            8125,
-                            210,
+                            "eid127",
+                            "left",
+                            1005,
+                            500,
                             "linear",
                             "${cadeau_rood3Copy}",
-                            '1',
-                            '1.2'
+                            '0px',
+                            '93px'
                         ],
                         [
-                            "eid130",
-                            "scaleY",
-                            8335,
-                            240,
+                            "eid128",
+                            "left",
+                            2255,
+                            500,
                             "linear",
                             "${cadeau_rood3Copy}",
-                            '1.2',
-                            '1'
+                            '93px',
+                            '0px'
                         ],
                         [
                             "eid133",
@@ -587,22 +557,22 @@
                             '1'
                         ],
                         [
-                            "eid127",
+                            "eid159",
                             "left",
-                            1005,
+                            5000,
                             500,
                             "linear",
-                            "${cadeau_rood3Copy}",
+                            "${cadeau_zwart3Copy}",
                             '0px',
                             '93px'
                         ],
                         [
-                            "eid128",
+                            "eid160",
                             "left",
-                            2255,
+                            6250,
                             500,
                             "linear",
-                            "${cadeau_rood3Copy}",
+                            "${cadeau_zwart3Copy}",
                             '93px',
                             '0px'
                         ],
@@ -627,47 +597,47 @@
                             '1'
                         ],
                         [
-                            "eid159",
-                            "left",
-                            5000,
-                            500,
+                            "eid129",
+                            "scaleY",
+                            8125,
+                            210,
                             "linear",
-                            "${cadeau_zwart3Copy}",
-                            '0px',
-                            '93px'
+                            "${cadeau_rood3Copy}",
+                            '1',
+                            '1.2'
                         ],
                         [
-                            "eid160",
-                            "left",
-                            6250,
-                            500,
+                            "eid130",
+                            "scaleY",
+                            8335,
+                            240,
                             "linear",
-                            "${cadeau_zwart3Copy}",
-                            '93px',
-                            '0px'
+                            "${cadeau_rood3Copy}",
+                            '1.2',
+                            '1'
                         ]
                     ]
                 }
             },
             "SymPlaats2": {
-                version: "5.0.0",
+                version: "5.0.1",
                 minimumCompatibleVersion: "5.0.0",
-                build: "5.0.0.375",
+                build: "5.0.1.386",
                 scaleToFit: "none",
                 centerStage: "none",
                 resizeInstances: false,
                 content: {
                     dom: [
                         {
-                            rect: ['-140px', '0px', '65px', '72px', 'auto', 'auto'],
-                            id: 'cadeau_rood3',
                             type: 'image',
+                            id: 'cadeau_rood3',
+                            rect: ['-140px', '0px', '65px', '72px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/cadeau_rood.png', '0px', '0px']
                         },
                         {
-                            rect: ['0px', '0px', '65px', '72px', 'auto', 'auto'],
-                            id: 'cadeau_zwart3',
                             type: 'image',
+                            id: 'cadeau_zwart3',
+                            rect: ['0px', '0px', '65px', '72px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/cadeau_zwart.png', '0px', '0px']
                         }
                     ],
@@ -728,26 +698,6 @@
                             '1'
                         ],
                         [
-                            "eid143",
-                            "left",
-                            1000,
-                            350,
-                            "linear",
-                            "${cadeau_rood3}",
-                            '0px',
-                            '-140px'
-                        ],
-                        [
-                            "eid144",
-                            "left",
-                            2150,
-                            350,
-                            "linear",
-                            "${cadeau_rood3}",
-                            '-140px',
-                            '0px'
-                        ],
-                        [
                             "eid151",
                             "scaleX",
                             8750,
@@ -766,6 +716,26 @@
                             "${cadeau_zwart3}",
                             '1.2',
                             '1'
+                        ],
+                        [
+                            "eid143",
+                            "left",
+                            1000,
+                            350,
+                            "linear",
+                            "${cadeau_rood3}",
+                            '0px',
+                            '-140px'
+                        ],
+                        [
+                            "eid144",
+                            "left",
+                            2150,
+                            350,
+                            "linear",
+                            "${cadeau_rood3}",
+                            '-140px',
+                            '0px'
                         ],
                         [
                             "eid147",
@@ -806,6 +776,70 @@
                             "${cadeau_zwart3}",
                             '-140px',
                             '0px'
+                        ]
+                    ]
+                }
+            },
+            "Play": {
+                version: "5.0.1",
+                minimumCompatibleVersion: "5.0.0",
+                build: "5.0.1.386",
+                scaleToFit: "none",
+                centerStage: "none",
+                resizeInstances: false,
+                content: {
+                    dom: [
+                        {
+                            font: ['alice, serif', [40, 'px'], 'rgba(245,225,31,1.00)', '600', 'none solid rgb(0, 0, 0)', 'normal', 'break-word', 'nowrap'],
+                            rect: ['0px', '0px', 'auto', 'auto', 'auto', 'auto'],
+                            align: 'left',
+                            text: 'Play',
+                            id: 'Play',
+                            opacity: '0',
+                            display: 'none',
+                            type: 'text'
+                        }
+                    ],
+                    style: {
+                        '${symbolSelector}': {
+                            isStage: 'true',
+                            rect: [undefined, undefined, '81px', '44px']
+                        }
+                    }
+                },
+                timeline: {
+                    duration: 2790,
+                    autoPlay: true,
+                    data: [
+                        [
+                            "eid187",
+                            "opacity",
+                            2450,
+                            340,
+                            "linear",
+                            "${Play}",
+                            '0',
+                            '1'
+                        ],
+                        [
+                            "eid179",
+                            "display",
+                            0,
+                            0,
+                            "linear",
+                            "${Play}",
+                            'none',
+                            'none'
+                        ],
+                        [
+                            "eid182",
+                            "display",
+                            2450,
+                            0,
+                            "linear",
+                            "${Play}",
+                            'none',
+                            'block'
                         ]
                     ]
                 }
