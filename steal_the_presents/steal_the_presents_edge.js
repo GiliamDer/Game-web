@@ -162,24 +162,24 @@
                     autoPlay: true,
                     data: [
                         [
-                            "eid163",
-                            "opacity",
+                            "eid161",
+                            "top",
                             0,
-                            0,
+                            500,
                             "linear",
-                            "${tekstballon}",
-                            '0',
-                            '0'
+                            "${grinch}",
+                            '498px',
+                            '250px'
                         ],
                         [
-                            "eid164",
-                            "opacity",
-                            615,
-                            260,
+                            "eid188",
+                            "top",
+                            500,
+                            2290,
                             "linear",
-                            "${tekstballon}",
-                            '0',
-                            '1'
+                            "${grinch}",
+                            '250px',
+                            '254px'
                         ],
                         [
                             "eid162",
@@ -243,24 +243,15 @@
                             'block'
                         ],
                         [
-                            "eid161",
-                            "top",
-                            0,
-                            500,
+                            "eid172",
+                            "clip",
+                            1575,
+                            470,
                             "linear",
-                            "${grinch}",
-                            '498px',
-                            '250px'
-                        ],
-                        [
-                            "eid188",
-                            "top",
-                            500,
-                            2290,
-                            "linear",
-                            "${grinch}",
-                            '250px',
-                            '254px'
+                            "${lijn2}",
+                            [0,0,45,0],
+                            [0,335,45,0],
+                            {valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'}
                         ],
                         [
                             "eid168",
@@ -314,15 +305,24 @@
                             'block'
                         ],
                         [
-                            "eid172",
-                            "clip",
-                            1575,
-                            470,
+                            "eid163",
+                            "opacity",
+                            0,
+                            0,
                             "linear",
-                            "${lijn2}",
-                            [0,0,45,0],
-                            [0,335,45,0],
-                            {valueTemplate: 'rect(@@0@@px @@1@@px @@2@@px @@3@@px)'}
+                            "${tekstballon}",
+                            '0',
+                            '0'
+                        ],
+                        [
+                            "eid164",
+                            "opacity",
+                            615,
+                            260,
+                            "linear",
+                            "${tekstballon}",
+                            '0',
+                            '1'
                         ]
                     ]
                 }
@@ -337,22 +337,21 @@
                 content: {
                     dom: [
                         {
+                            rect: ['69px', '0px', '49px', '54px', 'auto', 'auto'],
                             id: 'cadeau_rood1',
                             type: 'image',
-                            rect: ['69px', '0px', '49px', '54px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/cadeau_rood.png', '0px', '0px']
                         },
                         {
+                            rect: ['0px', '0px', '49px', '54px', 'auto', 'auto'],
                             id: 'cadeau_zwart1',
                             type: 'image',
-                            rect: ['0px', '0px', '49px', '54px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/cadeau_zwart.png', '0px', '0px']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '49px', '54px']
+                            rect: [null, null, '49px', '54px']
                         }
                     }
                 },
@@ -499,22 +498,21 @@
                 content: {
                     dom: [
                         {
+                            rect: ['0px', '0px', '65px', '72px', 'auto', 'auto'],
                             id: 'cadeau_rood3Copy',
                             type: 'image',
-                            rect: ['0px', '0px', '65px', '72px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/cadeau_rood.png', '0px', '0px']
                         },
                         {
+                            rect: ['0px', '0px', '65px', '72px', 'auto', 'auto'],
                             id: 'cadeau_zwart3Copy',
                             type: 'image',
-                            rect: ['0px', '0px', '65px', '72px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/cadeau_zwart.png', '0px', '0px']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '65px', '72px']
+                            rect: [null, null, '65px', '72px']
                         }
                     }
                 },
@@ -528,46 +526,6 @@
                         "zwart gepakt": 9500
                     },
                     data: [
-                        [
-                            "eid159",
-                            "left",
-                            5000,
-                            500,
-                            "linear",
-                            "${cadeau_zwart3Copy}",
-                            '0px',
-                            '93px'
-                        ],
-                        [
-                            "eid160",
-                            "left",
-                            6250,
-                            500,
-                            "linear",
-                            "${cadeau_zwart3Copy}",
-                            '93px',
-                            '0px'
-                        ],
-                        [
-                            "eid131",
-                            "scaleX",
-                            8125,
-                            210,
-                            "linear",
-                            "${cadeau_rood3Copy}",
-                            '1',
-                            '1.2'
-                        ],
-                        [
-                            "eid132",
-                            "scaleX",
-                            8335,
-                            240,
-                            "linear",
-                            "${cadeau_rood3Copy}",
-                            '1.2',
-                            '1'
-                        ],
                         [
                             "eid135",
                             "scaleY",
@@ -647,6 +605,46 @@
                             "${cadeau_rood3Copy}",
                             '93px',
                             '0px'
+                        ],
+                        [
+                            "eid131",
+                            "scaleX",
+                            8125,
+                            210,
+                            "linear",
+                            "${cadeau_rood3Copy}",
+                            '1',
+                            '1.2'
+                        ],
+                        [
+                            "eid132",
+                            "scaleX",
+                            8335,
+                            240,
+                            "linear",
+                            "${cadeau_rood3Copy}",
+                            '1.2',
+                            '1'
+                        ],
+                        [
+                            "eid159",
+                            "left",
+                            5000,
+                            500,
+                            "linear",
+                            "${cadeau_zwart3Copy}",
+                            '0px',
+                            '93px'
+                        ],
+                        [
+                            "eid160",
+                            "left",
+                            6250,
+                            500,
+                            "linear",
+                            "${cadeau_zwart3Copy}",
+                            '93px',
+                            '0px'
                         ]
                     ]
                 }
@@ -661,22 +659,21 @@
                 content: {
                     dom: [
                         {
+                            rect: ['-140px', '0px', '65px', '72px', 'auto', 'auto'],
                             id: 'cadeau_rood3',
                             type: 'image',
-                            rect: ['-140px', '0px', '65px', '72px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/cadeau_rood.png', '0px', '0px']
                         },
                         {
+                            rect: ['0px', '0px', '65px', '72px', 'auto', 'auto'],
                             id: 'cadeau_zwart3',
                             type: 'image',
-                            rect: ['0px', '0px', '65px', '72px', 'auto', 'auto'],
                             fill: ['rgba(0,0,0,0)', 'images/cadeau_zwart.png', '0px', '0px']
                         }
                     ],
                     style: {
                         '${symbolSelector}': {
-                            isStage: 'true',
-                            rect: [undefined, undefined, '65px', '72px']
+                            rect: [null, null, '65px', '72px']
                         }
                     }
                 },
@@ -731,26 +728,6 @@
                             '1'
                         ],
                         [
-                            "eid151",
-                            "scaleX",
-                            8750,
-                            210,
-                            "linear",
-                            "${cadeau_zwart3}",
-                            '1',
-                            '1.2'
-                        ],
-                        [
-                            "eid152",
-                            "scaleX",
-                            8960,
-                            240,
-                            "linear",
-                            "${cadeau_zwart3}",
-                            '1.2',
-                            '1'
-                        ],
-                        [
                             "eid143",
                             "left",
                             1000,
@@ -769,6 +746,26 @@
                             "${cadeau_rood3}",
                             '-140px',
                             '0px'
+                        ],
+                        [
+                            "eid151",
+                            "scaleX",
+                            8750,
+                            210,
+                            "linear",
+                            "${cadeau_zwart3}",
+                            '1',
+                            '1.2'
+                        ],
+                        [
+                            "eid152",
+                            "scaleX",
+                            8960,
+                            240,
+                            "linear",
+                            "${cadeau_zwart3}",
+                            '1.2',
+                            '1'
                         ],
                         [
                             "eid147",
