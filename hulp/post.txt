@@ -1,0 +1,13 @@
+In je .js file:
+---------------------
+$.post("mijnsuperawesomephpfilediepostnaardedatabase.php", {"username": mijnsuperawesomevariabelediedeusernamebijhoudt, "score": mijnsuperawesomevariabelediedescorebijhoudt});
+---------------------
+In je .php file:
+---------------------
+$username = htmlentities($_POST['username']);
+$score = $_POST['score'];
+$con = new mysqli("database", "username", "password");
+$stmt = $con->prepare("INSERT INTO table(username, score) VALUES (?,?)");
+$stmt->bind_param("ss", $username, $score);
+$stmt->execute();
+---------------------

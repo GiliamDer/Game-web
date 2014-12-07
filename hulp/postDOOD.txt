@@ -1,0 +1,8 @@
+sym.getSymbol("Symbol_bunnyhole").$("hitbox").click(function()
+         {
+         	PlayHitSound();
+         	console.log("ER is op geklikt");
+         	var score = sym.getVariable("score");
+         	sym.setVariable("score", score + 10);
+         	sym.$("score").html(score + 10);
+         	sym.getSymbol("Symbol_bunnyhole").play("dood");
