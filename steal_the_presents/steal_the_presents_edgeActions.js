@@ -14,6 +14,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       
       
       Symbol.bindElementAction(compId, symbolName, "document", "compositionReady", function(sym, e) {
+               
                //set the value of a Symbol variable
                sym.setVariable("score", 0);
                //get the value of a Symbol variable
@@ -31,38 +32,19 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
                sym.$("raam").hide();
                
                
-               /*sym.$("play").click(function()
-               			{
-               			PlayClickSound();
-               			var usernamevalue = usernameinvoer.attr('value');
-               			if( usernamevalue != "")
-               			{
-               				console.log("playknop geklikt");
-               
-               				// Hide an Element.
-               				//  (sym.$("name") resolves an Edge Animate element name to a DOM
-               				//  element that can be used with jQuery)
-               				sym.$("Play").hide();
-               				sym.$("Highscores").hide();
-               				sym.$("lijn1").hide();
-               				sym.$("liijn2").hide();
-               				sym.$("lijn3").hide();
-               				sym.$("tekstballon").hide();
-               				sym.$("grinch").hide();
-               				sym.$("landschap_intro").hide();
                
                
                
-               			var Rand1 = Math.floor(Math.random() * 3000) + 1000;
+               
+               		/*	var Rand1 = Math.floor(Math.random() * 3000) + 1000;
                			var Rand2 = Math.floor(Math.random() * 3000) + 1000;
                			var Rand3 = Math.floor(Math.random() * 3000) + 1000;
                
                			setTimeout(function() { StartCadeau1() },Rand1); 
                			setTimeout(function() { StartCadeau2() },Rand2);
-               			setTimeout(function() { StartCadeau3() },Rand3);   
-               			}
-               			}
-               			);*/
+               			setTimeout(function() { StartCadeau3() },Rand3);   */
+               
+               
 
       });
       //Edge binding end
@@ -87,8 +69,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
 
       
 
-      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2835, function(sym, e) {
-         sym.$("Symbol_1").click(function(){
+      Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 2790, function(sym, e) {
+         /*sym.$("Symbol_1").click(function(){
          console.log("playknop geklikt");
          
          				// Hide an Element.
@@ -114,6 +96,81 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          			}
          
          );
+         */
+
+      });
+      //Edge binding end
+
+      Symbol.bindElementAction(compId, symbolName, "${SymPlay}", "click", function(sym, e) {
+         // insert code for mouse click here
+         console.log("playknop geklikt");
+         				// Hide an Element.
+         				//  (sym.$("name") resolves an Edge Animate element name to a DOM
+         				//  element that can be used with jQuery)
+         				sym.$("SymPlay").hide();
+         				sym.$("Highscores").hide();
+         				sym.$("lijn1").hide();
+         				sym.$("lijn2").hide();
+         				sym.$("lijn3").hide();
+         				sym.$("grinch").hide();
+         				sym.$("landschap_intro").hide();
+         				sym.$("tekstballon").hide();
+         
+         				sym.$("symPlaats3").show();
+         				sym.$("symPlaats2").show();
+         				sym.$("symPlaats1").show();
+         				sym.$("achtergrond").show();
+         				sym.$("haard").show();
+         				sym.$("kerstboom").show();
+         				sym.$("raam").show();	
+         
+         
+         			var Rand1 = Math.floor(Math.random() * 500) + 1000;
+         			var Rand2 = Math.floor(Math.random() * 500) + 1000;
+         			var Rand3 = Math.floor(Math.random() * 500) + 1000;
+         			console.log(Rand1);
+         			console.log(Rand2);
+         			console.log(Rand3);
+         
+         			setTimeout(function() { StartCadeau1() },Rand1); 
+         			setTimeout(function() { StartCadeau2() },Rand2);
+         			setTimeout(function() { StartCadeau3() },Rand3);	
+         
+         			function StartCadeau1(Rand1){
+         				var Rand1 = Math.floor(Math.random() * 500) + 1000;
+         				var randGetal = Math.floor(Math.random() * 2) + 1;
+         				if(randGetal == 1)
+         				{
+         					sym.play("SymPlaats1", rood1_gestart);
+         				}
+         				else
+         				{
+         					sym.play("SymPlaats1", zwart1_gestart);
+         				}
+         			};
+         			function StartCadeau2(){
+         				var randGetal = Math.floor(Math.random() * 2) + 1;
+         				if(randGetal == 1)
+         				{
+         				sym.play("SymPlaats2", rood2_gestart);
+         				}
+         				else
+         				{
+         				sym.play("SymPlaats2", zwart2_gestart);
+         				}
+         			}
+         			function Startcadeau3(){
+         			var randGetal = Math.floor(Math.Random()*2)+1;
+         			if(randGetal==1)
+         			{
+         			sym.play("SymPlaats3", rood3_gestart);
+         			}
+         			else
+         			{
+         			sym.play("SymPlaats3", zwart3_gestart);
+         			}
+         			}
+         
 
       });
       //Edge binding end
@@ -157,7 +214,8 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
       //Edge binding end
 
       Symbol.bindTriggerAction(compId, symbolName, "Default Timeline", 8680, function(sym, e) {
-         // insert code herevar randGetal = Math.floor(Math.random() * 2) + 1;
+         // insert code here
+         var randGetal = Math.floor(Math.random() * 2) + 1;
          
          if(randGetal == 1)
          {
@@ -334,6 +392,7 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
    (function(symbolName) {   
    
       Symbol.bindElementAction(compId, symbolName, "${Play}", "click", function(sym, e) {
+         /*
          console.log("playknop geklikt");
          				// Hide an Element.
          				//  (sym.$("name") resolves an Edge Animate element name to a DOM
@@ -347,16 +406,26 @@ var Composition = Edge.Composition, Symbol = Edge.Symbol; // aliases for commonl
          				sym.$("landschap_intro").hide();
          				sym.$("tekstballon").hide();
          
+         				sym.$("symPlaats3").show();
+         				sym.$("symPlaats2").show();
+         				sym.$("symPlaats1").show();
+         				sym.$("achtergrond").show();
+         				sym.$("haard").show();
+         				sym.$("kerstboom").show();
+         				sym.$("raam").show();	
+         				
          
-         			var Rand1 = Math.floor(Math.random() * 3000) + 1000;
-         			var Rand2 = Math.floor(Math.random() * 3000) + 1000;
-         			var Rand3 = Math.floor(Math.random() * 3000) + 1000;
+         
+         			var Rand1 = Math.floor(Math.random() * 2000) + 1000;
+         			var Rand2 = Math.floor(Math.random() * 2000) + 1000;
+         			var Rand3 = Math.floor(Math.random() * 2000) + 1000;
          			console.log(Rand1);
          			console.log(Rand2);
          
-         		/*	setTimeout(function() { StartCadeau1() },Rand1); 
+         			setTimeout(function() { StartCadeau1() },Rand1); 
          			setTimeout(function() { StartCadeau2() },Rand2);
-         			setTimeout(function() { StartCadeau3() },Rand3);  */ 
+         			setTimeout(function() { StartCadeau3() },Rand3);	*/
+         			
          
 
       });
